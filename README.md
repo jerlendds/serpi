@@ -10,6 +10,10 @@
 
 - Node.js (with `npm`).
 
+## Scraper Requirements
+
+- [Scrapy](https://scrapy.org/).
+
 ## Scraper local development
 
 TODO: god I hope I remember to update this readme
