@@ -666,16 +666,12 @@ docker stack deploy -c docker-stack.yml --with-registry-auth "${STACK_NAME?Varia
 
 ### Continuous Integration / Continuous Delivery
 
-If you use GitLab CI, the included `.gitlab-ci.yml` can automatically deploy it. You may need to update it according to your GitLab configurations.
-
-If you use any other CI / CD provider, you can base your deployment from that `.gitlab-ci.yml` file, as all the actual script steps are performed in `bash` scripts that you can easily re-use.
+TODO: base deployment from `.gitlab-ci.yml` file. All the actual script steps are performed in `bash` scripts.
 
 GitLab CI is configured assuming 2 environments following GitLab flow:
 
 - `prod` (production) from the `production` branch.
-- `stag` (staging) from the `master` branch.
-
-If you need to add more environments, for example, you could imagine using a client-approved `preprod` branch, you can just copy the configurations in `.gitlab-ci.yml` for `stag` and rename the corresponding variables. The Docker Compose file and environment variables are configured to support as many environments as you need, so that you only need to modify `.gitlab-ci.yml` (or whichever CI system configuration you are using).
+- `stag` (staging) from the `main` branch.
 
 ## Docker Compose files and env vars
 
